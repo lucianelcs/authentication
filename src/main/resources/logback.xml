@@ -1,0 +1,17 @@
+<configuration>
+<property resource="application.properties" />
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+        	<charset>UTF-8</charset>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.escola.autenticacao" level="INFO" additivity="false">
+		<appender-ref ref="STDOUT" />
+	</logger>
+
+	<logger name="org.springframework" level="WARN" />
+    
+    <statusListener class="ch.qos.logback.core.status.NopStatusListener" />
+</configuration>
